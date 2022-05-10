@@ -41,9 +41,17 @@ if (is_post()) {
     }
 
     if (count($errors) == 0) {
-        // todo: save values in the database
-        // todo: success message
-        dd($_POST);
+        // todo change this later
+        $user_id = 1;
+
+        $sql = $db->prepare("INSERT INTO albums (user_id, title, artist, year, description) VALUES (?, ?, ?, ?, ?)");
+        $sql->bind_param('issis', $user_id, $title, $artist, $year, $description);
+        $sql->execute();
+        $sql->close();
+
+        $new_id = $db->insert_id;
+
+        redirect("details", ['id' => $new_id]);
     }
 }
 ?>

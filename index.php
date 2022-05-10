@@ -3,6 +3,8 @@
 include_once "config.php";
 include_once "functions.php";
 
+$db = db_connect();
+
 $page = isset($_GET['p']) ? $_GET['p'] : 'home';
 
 include_once './views/_header.php';
@@ -14,3 +16,5 @@ if (file_exists("./pages/{$page}.php")) {
 }
 
 include_once "./views/_footer.php";
+
+db_close($db);
