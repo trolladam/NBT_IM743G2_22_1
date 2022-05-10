@@ -97,3 +97,35 @@ function get_album_count()
 
     return is_array($row) ? $row['count'] : 0;
 }
+
+
+function log_in_user($id)
+{
+    $_SESSION['user_id'] = $id;
+}
+
+function user_logged_in()
+{
+    return isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null;
+}
+
+function current_user()
+{
+    global $db;
+
+    if (!user_logged_in()) {
+        return null;
+    }
+
+    $sql = $db->prepare("SELECT * FROM users WHERE id = ?");
+    $sql->bind_param('i', $_SESSION["user_id"]);
+    $sql->execute();
+
+    return $sql->get_result()->fetch_assoc();
+}
+
+function log_out_user()
+{
+    $_SESSION = [];
+    session_destroy();
+}

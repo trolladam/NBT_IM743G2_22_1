@@ -12,7 +12,11 @@ $total_pages = ceil(get_album_count() / PAGE_LIMIT);
 <h1>
     Home page
 </h1>
-
+<?php if (user_logged_in()) : ?>
+    <p>
+        Hello, <?= current_user()['name']; ?>
+    </p>
+<?php endif; ?>
 <div class="album-list">
     <?php while ($album = $albums->fetch_assoc()) : ?>
         <?php require BASE_PATH . '/views/_album_item.php'; ?>

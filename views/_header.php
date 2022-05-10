@@ -16,7 +16,15 @@
             <nav>
                 <a href="<?php echo page_url('home'); ?>">Home</a>
                 <a href="<?php echo page_url('about'); ?>">About</a>
-                <a href="<?php echo page_url('upload'); ?>">Upload</a>
+                <?php if (user_logged_in()) : ?>
+                    <a href="<?php echo page_url('upload'); ?>">Upload</a>
+                    <a href="<?php echo page_url('logout'); ?>">
+                        Sign out
+                    </a>
+                <?php else : ?>
+                    <a href="<?php echo page_url('login'); ?>">Login</a>
+                    <a href="<?php echo page_url('register'); ?>">Register</a>
+                <?php endif; ?>
             </nav>
         </div>
     </header>
