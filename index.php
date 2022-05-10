@@ -1,5 +1,6 @@
 <?php
 
+include_once "config.php";
 include_once "functions.php";
 
 $page = isset($_GET['p']) ? $_GET['p'] : 'home';
