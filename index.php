@@ -1,7 +1,7 @@
 <?php
 
-include_once "config.php";
-include_once "functions.php";
+require_once "config.php";
+require_once "functions.php";
 
 $db = db_connect();
 

@@ -126,3 +126,46 @@ footer {
     margin: 0 auto;
     width: 500px;
 }
+
+.album-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-list .album-item {
+    padding: 10px;
+    width: 25%;
+}
+
+.album-list .album-item a {
+    color: white;
+    text-decoration: none;
+}
+.album-list .album-item a:hover {
+    opacity: 0.8;
+}
+
+.album-list .album-item img {
+    width: 100%;
+    height: auto;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a {
+    display: block;
+    padding: 1rem;
+    color: black;
+    background: #999999;
+    text-decoration: none;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    color: white;
+    background-color: #3f3feb;
+}
