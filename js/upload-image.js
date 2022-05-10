@@ -1,15 +1,6 @@
 window.onload = function () {
     let form = document.getElementById('upload-image')
 
-    let user = {
-        firstname: 'John',
-        lastname: 'Doe',
-        age: 34,
-        hobbies: ['travel', 'gaming'],
-    }
-
-    console.log(user.firstname)
-
     form.addEventListener('submit', function (e) {
         e.preventDefault()
 
@@ -26,8 +17,17 @@ window.onload = function () {
         axios
             .post(e.target.action, formData)
             .then(function (response) {
-                // todo handle success
-                console.log('success happend')
+                const imageUrl = response.data.image_url
+                const message = response.data.message
+
+                let htmlSuccess = `
+                    <div>
+                        <div class="alert alert-success">${message}</div>
+                        <img src="${imageUrl}" alt="" width="150" />
+                    </div>
+                `
+
+                responseContainer.innerHTML = htmlSuccess
             })
             .catch(function (error) {
                 // catch will run when we get back an http error from the server

@@ -19,3 +19,5 @@ define('DB_NAME', 'demo');
 
 
 define('PAGE_LIMIT', 8);
+
+define('MAX_UPLOAD_SIZE', 10);

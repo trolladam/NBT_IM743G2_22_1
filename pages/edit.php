@@ -37,7 +37,7 @@ if (is_post()) {
 extract($album, EXTR_SKIP);
 
 $action_url = page_url('edit', ['id' => $id]);
-$image_upload_url = page_url('upload-image');
+$image_upload_url = page_url('upload-image', ['id' => $id]);
 
 ?>
 <?php include_once './views/_header.php'; ?>

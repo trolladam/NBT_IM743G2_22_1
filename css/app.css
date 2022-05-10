@@ -156,6 +156,10 @@ footer {
     margin-bottom: 2rem;
 }
 
+.page-details .description {
+    white-space: pre-line;
+}
+
 .album-list {
     display: flex;
     flex-wrap: wrap;
