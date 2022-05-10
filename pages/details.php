@@ -13,9 +13,11 @@ if ($album === null) {
 }
 
 ?>
+<?php include_once './views/_header.php'; ?>
 <div class="page page-details">
     <h1><?= $album['title']; ?></h1>
     <p><?= $album['description']; ?></p>
     <p>Released by <?= $album['artist']; ?></p>
     <p>Released in <?= $album['year']; ?></p>
 </div>
+<?php include_once "./views/_footer.php"; ?>

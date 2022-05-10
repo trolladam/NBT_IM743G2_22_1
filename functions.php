@@ -15,7 +15,7 @@ function dump($variable)
 
 function asset($asset)
 {
-    return BASE_URL . $asset;
+    return BASE_URL . $asset . '?v=' . APP_VERSION;
 }
 
 function page_url($page, $params = [])

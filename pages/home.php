@@ -8,6 +8,7 @@ $albums = get_album_list($limit);
 $total_pages = ceil(get_album_count() / PAGE_LIMIT);
 
 ?>
+<?php include_once './views/_header.php'; ?>
 <h1>
     Home page
 </h1>
@@ -24,3 +25,4 @@ $total_pages = ceil(get_album_count() / PAGE_LIMIT);
         </a>
     <?php endfor; ?>
 </nav>
+<?php include_once "./views/_footer.php"; ?>

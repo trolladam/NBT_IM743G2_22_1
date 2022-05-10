@@ -1,3 +1,4 @@
+<?php include_once './views/_header.php'; ?>
 <h1>About us</h1>
 <div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla minus facere quasi necessitatibus officia labore odit dolorum, libero accusantium vitae nobis voluptatibus facilis inventore, obcaecati, doloremque dignissimos. Odio, exercitationem magni.</p>
@@ -11,3 +12,5 @@
     <p>Vitae quos inventore fugit repellat atque distinctio dolorem hic, nisi rerum minus corporis sit iste, quia, quam obcaecati. Deleniti expedita iste veritatis voluptatibus sunt rem assumenda maiores quo officiis ea.</p>
     <p>Qui maxime pariatur, laboriosam tenetur ad iusto sapiente hic! At quos accusamus blanditiis obcaecati? A odit dolor nihil aliquam facilis deleniti debitis ut, deserunt explicabo quo? Illo voluptate esse commodi.</p>
 </div>
+
+<?php include_once "./views/_footer.php"; ?>
