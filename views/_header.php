@@ -12,11 +12,13 @@
 
 <body>
     <header>
-        <nav>
-            <a href="<?php echo page_url('home'); ?>">Home</a>
-            <a href="<?php echo page_url('about'); ?>">About</a>
-            <a href="<?php echo page_url('upload'); ?>">Upload</a>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="<?php echo page_url('home'); ?>">Home</a>
+                <a href="<?php echo page_url('about'); ?>">About</a>
+                <a href="<?php echo page_url('upload'); ?>">Upload</a>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container">
         <!-- Main content comes here -->

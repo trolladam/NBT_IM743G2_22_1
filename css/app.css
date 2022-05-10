@@ -1,22 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+main {
+    display: block;
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
-}
-
-* {
-    box-sizing: border-box;
+    color: #ebebeb;
+    background-color: #181a1b;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 1rem;
-    background: slategray;
+    background: rgba(64, 66, 67, 0.8);
+    z-index: 1000;
+}
+
+header nav {
+    text-align: right;
+}
+
+header a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+main {
+    padding: 60px 0;
 }
 
 footer {
     padding: 1rem;
     text-align: center;
     background: slategray;
+}
+
+.container {
+    margin: 0 auto;
+    width: 800px;
 }
 
 .page {
@@ -26,9 +73,9 @@ footer {
 .card {
     display: block;
     padding: 1rem;
-    background: white;
+    background: rgb(58, 58, 58);
     border-radius: 1rem;
-    box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px rgb(49, 49, 49);
 }
 
 .form-group {
@@ -46,6 +93,17 @@ footer {
     padding: 0.5rem;
     border-radius: 0.25rem;
     border: 1px solid #999999;
+}
+
+.form-group.has-error label {
+    color: tomato;
+}
+.form-group.has-error .form-control {
+    border-color: tomato;
+}
+.validation-error {
+    font-size: 0.85rem;
+    color: tomato;
 }
 
 .btn {

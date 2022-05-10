@@ -1,6 +1,8 @@
 </main>
 <footer>
-    Copyright something
+    <div class="container">
+        Copyright something
+    </div>
 </footer>
 </body>
 
